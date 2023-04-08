@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Patisserie</title>
+
+    <!-- swiper js -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+
+            height: 300px;
+
+        }
+
+
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            border-radius: 10px;
+
+        }
+
+        .contenu-slide {
+            position: relative;
+            text-align: center;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.8s;
+        }
+
+        .swiper-slide:hover img {
+            transform: scale(1.1);
+        }
+
+        .description-slide {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .description-slide h1 {
+            font-size: 20px;
+            font-family: 'Playfair Display',
+                serif;
+            color: #fff;
+            font-weight: 500;
+
+        }
+
+        .description-slide p {
+            font-size: 17px;
+            color: #fff;
+            font-family: 'Playfair Display',
+                serif;
+            font-weight: 500;
+        }
+
+        .description-slide .noir {
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .description-slide .text-noir {
+            color: #000;
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav class="nav">
+
+            <div class="container">
+
+                <h1><a href="index.html">Delicia</a></h1>
+
+                <ul class="liens">
+<!-- 
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Infos</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Contact</a></li> -->
+
+                </ul>
+
+
+            </div>
+
+            <!-- <div class="menu-boutton">
+
+                <i class="fa-solid fa-bars fa-2x"></i>
+
+            </div> -->
+
+        </nav>
+
+    </header>
+
+
+    <section class="patisserie">
+
+
+        <div class="patisserie-titre">
+
+            <h1>Menu de la Patisserie</h1>
+        </div>
+
+
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/begnet.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Begnets</h1>
+                            <p>400 FCFCA</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/cake-caramel.jpg" alt="">
+                        <div class="description-slide">
+                            <h1 class="noir">Cakes au caramel</h1>
+                            <p class="text-noir">700 FCFCA</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/cake-chocolat.jpg" alt="">
+                        <div class="description-slide">
+                            <h1 >Cake au Chocolat</h1>
+                            <p >700 FCFCA</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/cake-creme.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Cake à la crème</h1>
+                            <p>600 FCFCA</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/cake-vanille.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Gateaux à la vanille</h1>
+                            <p>400 FCFCA</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/croissant-fonio.jpg" alt="">
+                        <div class="description-slide">
+                            <h1 >Croissant à base de Fonio</h1>
+                            <p >400 FCFCA</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/gateaux-chocolat.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Gateaux au Chocolat</h1>
+                            <p>1000 FCFCA</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/gateaux-creme.png" alt="">
+                        <div class="description-slide">
+                            <h1 class="noir">Gateaux à la crème</h1>
+                            <p class="text-noir">600 FCFCA</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/gateaux-fonio.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Madeleine</h1>
+                            <p>300 FCFCA</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/gateaux-fruit.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Gateaux aux Fruits</h1>
+                            <p>600 FCFCA</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/pain-chocolat.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Pain au chocolat</h1>
+                            <p>500 FCFCA</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="contenu-slide">
+                        <img src="./images/patisserie/pain-raisin.jpg" alt="">
+                        <div class="description-slide">
+                            <h1>Pain aux Raisin</h1>
+                            <p>400 FCFCA</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+
+
+    <footer id="footer">
+
+        <div class="container-footer">
+
+
+            <div class="footer-adresse">
+                <h1>Adresse</h1>
+                <ul class="list-adresse">
+                    <li>Plateaux, Dakar</li>
+                    <li>HLM, Saint Louis</li>
+                    <li>Phone: 4566870383</li>
+                    <li>Phone: 9760483557</li>
+                    <li>Mail: infos@delicia.com</li>
+                </ul>
+            </div>
+
+
+
+            <div class="footer-adresse">
+                <h1>Ouverture</h1>
+                <ul class="list-adresse">
+                    <li>Lundi à Vendredi</li>
+                    <li>11h à 22h</li>
+            
+                    <li>Samedi et Dimanche</li>
+                    <li>17h à 00H</li>
+            
+                </ul>
+            </div>
+
+
+            <div class="footer-reseaux">
+                <h1>Suivez Nous</h1>
+                <div class="footer-reseaux-icones">
+                    <a href="#"><i class="fa-brands fa-facebook-f "></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram "></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter "></i></a>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            <p>Delicia copyright © 2022 Tous Droit reservé</p>
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- swiper script -->
+
+
+    <script src="main.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+
+
+            spaceBetween: 30,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            speed: 2000,
+
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+
+            },
+
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    slidesPerGroup: 1,
+                },
+
+                800: {
+                    slidesPerView: 2.2,
+                    slidesPerGroup: 2,
+                },
+
+                1100: {
+                    slidesPerView: 3.2,
+                    slidesPerGroup: 3,
+                },
+
+                  1300: {
+                    slidesPerView: 4.2,
+                    slidesPerGroup: 4,
+                },
+
+            }
+
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

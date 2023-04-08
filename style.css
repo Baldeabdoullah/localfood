@@ -1,0 +1,1054 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+html, 
+body {
+    position: relative;
+    height: 100%;
+   
+   
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    overflow-x: hidden;
+}
+
+
+
+/* BARRE DE NAVIGATION */
+
+
+header {
+    width: 100%;
+    
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 15px;
+    position: absolute;
+    z-index: 99;
+    transition: 0.4s;
+   
+   
+    
+}
+
+.nav.fixed {
+    position: fixed;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+   
+    align-items: center;
+  flex: 1;
+
+}
+.container h1 {
+   
+    padding-top: 10px;
+}
+
+.container h1 a {
+    text-decoration: none;
+    /* color: #333; */
+    color: #fff;
+    font-family: 'Raleway',
+    sans-serif;
+    font-size: 28px;
+    /* border: 2px solid #333; */
+    border: 2px solid #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.nav.fixed .container h1 a {
+    color: #333;
+    border: 2px solid #333;
+
+}
+
+.nav.fixed .container .liens li a {
+    color: #333;
+}
+
+.liens {
+    display: flex;
+}
+
+.liens li {
+    list-style-type: none;
+    margin: auto 10px;
+}
+
+.liens li a {
+    text-decoration: none;
+    /* color: #333; */
+    color: #fff;
+    font-family: 'Raleway',
+    sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+.menu-boutton {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/* LE CAROUSEL */
+
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+
+.slide.current {
+    opacity: 1;
+}
+
+
+.slide  .content {
+
+   text-align: center;
+   
+    opacity: 0;
+    transition: 0.8s;
+    height: 100%;
+    width: 100%;
+   
+
+   
+ } 
+ 
+ .slide .content h1 { 
+   
+    font-family: 'Playfair Display',
+    serif;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 300;
+   position: absolute;
+   /* top: 50%; */
+   top: 50%;
+   bottom: 50%;
+
+
+
+   left: 10px;
+   right: 10px;
+   padding-top: 0;
+  
+ 
+  
+   
+} 
+
+
+
+
+.slide.current .content {
+
+    opacity: 1;
+   
+
+}
+
+/* LES BOUTTONS */
+
+.buttons {
+   
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 30px;
+  
+}
+
+#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #333;
+    border: 2px solid #333;
+}
+
+#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    color: #333;
+    border: 2px solid #333;
+}
+/* 
+#prev:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#next:hover {
+    color: #fff;
+    border: 2px solid #fff;
+} */
+
+
+/* LES IMAGES */
+
+.slide:first-child {
+    background: url(./Menu1.jpg) no-repeat center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url(./Menu2.jpg) no-repeat center/cover;
+
+}
+
+.slide:nth-child(3) {
+    background: url(./menu3.jpg) no-repeat center/cover;
+}
+
+
+.slide:nth-child(4) {
+
+    background: url(./Menu4.jpg) no-repeat center/cover;
+}
+
+
+/* LA PARTIE INFOS */
+
+
+#infos {
+    padding: 18px;
+    background: url(./menu\ Cocolat.jpg)  no-repeat center/cover;
+    width: 100%;
+    min-height: 50vh;
+  
+}
+
+
+.container-infos {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+  
+   
+}
+
+/* LA DESCRIPTION DE L'ENTREPRISE */
+
+
+.infos-description {
+/* max-width: 600px; */
+padding: 10px;
+
+}
+
+.infos-description h1 {
+    margin: 10px auto;
+    font-family: 'Playfair Display',
+    serif;
+    /* color: #95afc0; */
+    /* color: #1B1464; */
+    color: #fff;
+    font-size: 30px;
+   
+}
+
+.infos-description p {
+    font-family: 'Playfair Display',
+    serif;
+    text-align: justify left;
+    word-spacing: normal;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+   
+    
+}
+
+
+
+
+
+/* LES IMAGES */
+
+.infos-image{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    box-shadow: -20px 40px 40px #333;
+  
+    
+
+}
+
+
+.item {
+
+    overflow: hidden;
+
+
+}
+
+.item img {
+   height: 100%;
+   width: 100%;
+   transition: 0.8s;
+  
+} 
+
+.item:hover img {
+    transform: scale(1.2);
+}
+/* 
+.item:nth-child(1) {
+
+}
+
+.item:nth-child(2) {} */
+
+.item:nth-child(3) {
+    grid-column: 1/3;
+}
+
+
+
+/* LES SERVICES */
+
+#services {
+    padding: 20px;
+    background: url(./menu-cajou.jpg) no-repeat center/cover;
+    width: 100%;
+}
+
+.services-titre h1 {
+
+    font-family: 'Playfair Display',
+    serif;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 200;
+    padding-top: 15px;
+
+}
+
+.container-services {
+
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+} 
+
+.services-item {
+
+}
+
+.services-text {
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.services-text h1 {
+    font-family: 'Playfair Display',
+    serif;
+    font-size: 25px;
+   text-align: center;
+   margin: 20px auto;
+   color: #fff;
+   font-weight: 200;
+
+}
+
+.services-text p {
+    font-family: 'Playfair Display',
+    serif;
+    font-size: 20px;
+  
+    /* color: #1e272e; */
+    color: #fff;
+
+}
+
+   /* POUR LES ICONES DE INFOS */
+
+.services-item .services-icone {
+    text-align: center;
+}
+
+.services-item .services-icone .fa-solid {
+
+    color: #e67e22;
+   
+    /* box-shadow: -10px 10px 10px #333; */
+   
+   
+
+}
+/* 
+.fa-solid {
+    color: #e67e22;
+    box-shadow: -10px 10px 10px #333;
+    text-align: center;
+} */
+
+
+
+
+/* LE MENU */
+
+
+#menu {
+
+   background: url(./Menu-image/pizza3.jpg) no-repeat center/cover;
+   min-height: 100%;
+   padding: 15px;
+   
+ 
+}
+
+.menu-titre {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+ 
+
+}
+
+.menu-titre h1 {
+    color: #fff;
+
+    font-family: 'Playfair Display',
+    serif;
+    font-size: 30px;
+    font-weight: 500;
+ 
+   
+  
+}
+
+
+.container-menu {
+ 
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
+  
+   width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 30px 40px 40px #333;
+    
+    
+    
+}
+
+.menu-item {
+  max-height: 300px;
+
+}
+
+.menu-item a {
+    text-decoration: none;
+   
+}
+
+.menu-image {
+
+    position: relative;
+    text-align: center;
+     width: 100%;
+    height: 100%;
+     overflow: hidden;
+    
+   
+  
+
+}
+
+.menu-image img {
+height: 100%;
+width: 100%;
+transition: 0.8s;
+
+}
+
+.menu-image:hover img {
+    transform: scale(1.2);
+} 
+
+
+.menu-image-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+
+}
+
+
+
+    
+    .menu-image-description h1  {
+        color: #fff;
+        font-family: 'Playfair Display',
+        serif;
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+
+    /* POUR LA DISPOSITION DU GRID */
+
+.menu-item:nth-child(1) {
+    grid-column: 1/3;
+
+}
+  
+.menu-item:nth-child(2) {
+    grid-column: 3/5;
+   
+}
+
+
+
+
+
+#footer {
+  margin: 10px auto;
+    background-color: black;
+ 
+   padding: 20px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-adresse {
+    
+}
+
+.footer-adresse h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+    serif;
+    font-weight: 200;
+    margin: 20px auto;
+}
+
+.list-adresse {
+
+}
+
+.list-adresse li {
+    list-style-type: none;
+    color: #fff;
+    margin: 15px auto;
+    font-family: 'Playfair Display',
+    serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.footer-reseaux {
+
+}
+
+.footer-reseaux h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+    serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px auto;
+}
+
+.footer-reseaux-icones {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-reseaux-icones a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    margin: 10px auto;
+}
+
+.footer-reseaux .fa-brands {
+    color: #fff;
+}
+
+.copyright  {
+    text-align: center;
+
+}
+
+.copyright p {
+    color: #fff;
+    font-family: 'Playfair Display',
+    serif;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+
+
+
+/* DEUXIEME PAGE POUR LA RESTAURATION */
+
+.restauration {
+    background: url(./images/restauration/retaurant.jpg) no-repeat center/cover;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.restauration-titre {
+    text-align: center;
+    padding: 10px;
+    
+   
+}
+
+.restauration-titre h1 {
+
+    color: #fff;
+    font-family: 'Playfair Display',
+    serif;
+    font-weight: 400;
+   padding-top: 160px;
+   padding-bottom: 50px;
+   font-size: 30px;
+   
+
+}
+
+/* POUR LA TROISIEME PAGE PATISSERIE */
+
+.patisserie {
+    background: url(./images/patisserie/patisserie3.jpg) no-repeat center/cover;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+
+.patisserie-titre {
+    text-align: center;
+    padding: 10px;
+
+}
+.patisserie-titre h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+    serif;
+    font-weight: 400;
+    padding-top: 160px;
+    padding-bottom: 50px;
+    font-size: 30px;
+
+}
+
+
+/* LES BOUTTONS DE DEFILEMENTS POUR LES SLIDES */
+
+.swiper .swiper-button-next {
+    color: #fff;
+
+}
+
+.swiper .swiper-button-prev {
+    color: #fff;
+
+}
+
+
+
+/* POUR LA QUATRIEME PAGE FAST-FOOD */
+
+.fastfood {
+  background: url(./images/patisserie/pizza2.jpg);
+    min-height: 100vh;
+    padding: 20px;
+
+}
+    
+
+
+.fastfood-titre {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.fastfood-titre h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+        serif;
+    font-weight: 400;
+    padding-top: 160px;
+    padding-bottom: 50px;
+    font-size: 30px;
+
+}
+
+
+/* POUR LA CINQUIEME PAGE GLACIER */
+
+.glacier {
+    background: url(./images/galces/glacier-menu.jpg) no-repeat center/cover;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+
+.glacier-titre {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.glacier-titre h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+        serif;
+    font-weight: 400;
+    padding-top: 160px;
+    padding-bottom: 50px;
+    font-size: 30px;
+
+}
+
+/*   POUR LA SIXIEME PAGE COLLATION */
+
+.collation {
+    background: url(./images/collation/Menu-collation.jpg) no-repeat center/cover;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+
+.collation-titre {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.collation-titre h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+        serif;
+    font-weight: 400;
+    padding-top: 160px;
+    padding-bottom: 50px;
+    font-size: 30px;
+
+}
+
+/*   POUR LA SEPTIEME PAGE CONFISERIE */
+
+.confiserie {
+    background: url(./Menu-image/menu-confiserie.jpg) no-repeat center/cover;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+
+.confiserie-titre {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.confiserie-titre h1 {
+    color: #fff;
+    font-family: 'Playfair Display',
+        serif;
+    font-weight: 400;
+    padding-top: 160px;
+    padding-bottom: 50px;
+    font-size: 30px;
+
+}
+
+
+
+
+/* POUR LE RESPONSIVE */
+
+
+
+@media(max-width: 1000px) {
+
+
+    /* TITRE DU CONTENU DES SLIDES */
+
+    .slide .content h1 {
+      
+        font-family: 'Playfair Display',
+            serif;
+        font-size: 40px;
+        color: #fff;
+        font-weight: 300;
+       
+    }
+
+
+
+
+
+    .container-infos {
+        grid-template-columns: 1fr;
+    }
+
+   /* POUR LES SERVICES */
+
+.container-services {
+    display: block;
+}
+
+
+/* POUR LE MENU */
+
+.container-menu {
+    grid-template-columns: 1fr;
+}
+.menu-item:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+}
+
+.menu-item:nth-child(2) {
+  
+   grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+
+
+.menu-item:nth-child(3) {
+   
+    grid-column:1/2;
+    grid-row: 3/4;
+
+}
+
+
+.menu-item:nth-child(4) {
+
+    grid-column: 1/2;
+    grid-row: 4/5;
+
+}
+
+.menu-item:nth-child(5) {
+
+    grid-column: 1/2;
+    grid-row: 5/6;
+
+}
+
+.menu-item:nth-child(6) {
+
+    grid-column: 1/2;
+    grid-row: 6/7;
+
+}
+
+
+
+  
+
+    
+}
+
+@media(max-width: 800px) {
+
+    .slide .content h1 {
+       
+        font-family: 'Playfair Display',
+            serif;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 300;
+
+        left: 20px;
+        right: 20px;
+    }
+
+    .menu-boutton {
+
+        display: block;
+
+    }
+
+
+    .nav {
+
+        background-color: #fff;
+        padding-top: 20px;
+
+
+    }
+
+    .container {
+        display: block;
+        overflow: hidden;
+
+    }
+
+    .container h1 a {
+        text-decoration: none;
+        /* color: #333; */
+        color: #333;
+
+        /* border: 2px solid #333; */
+        border: 2px solid #333;
+
+    }
+
+
+    .liens {
+        display: block;
+
+        height: 0;
+        transition: 0.5s;
+
+    }
+
+    .liens.deroule {
+        height: 180px;
+
+    }
+
+    .liens li {
+        list-style-type: none;
+        margin: 14px auto;
+    }
+
+    .liens li a {
+        color: #333;
+    }
+
+
+    /* POUR LE MENU DU RESTAURANT */
+
+    .container-menu {
+        width: 90%;
+    }
+
+   /* POUR LE  FOOTER */
+
+.container-footer {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  
+}
+
+
+
+
+}
+
+@media (max-width: 600px) {
+
+    .container h1 a {
+        font-size: 1rem;
+    }
+    .liens li a {
+        font-size: 1rem;
+    }
+
+     .slide .content h1 {
+        font-size: 1rem;
+     }
+
+    .infos-description h1 {
+        font-size: 1rem;
+    }
+
+    .infos-description p {
+        font-size: 1rem;
+    }
+
+     .services-titre h1 {
+        font-size: 1rem;
+     }
+
+    .services-text h1 {
+        font-size: 1rem;
+    }
+
+    .services-text p {
+        font-size: 1rem;
+    }
+
+    .menu-titre h1 {
+        font-size: 1rem;
+    }
+
+   .menu-image-description h1 {
+    font-size: 1rem;
+   }
+    
+}
